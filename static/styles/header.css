@@ -1,0 +1,51 @@
+.header{
+	display: 			block;
+	position: 			sticky;
+	font-size: 			2.5vh;
+	height: 			5vh;
+	width: 				100%;
+	padding-right: 		10px;
+	padding-left: 		10px;
+	background-color: 	#FFF;
+	color: 				#000;
+	user-select: 		none;
+	border-bottom: 		1px solid #e1e8ed;
+	border-left: 		1px solid #e1e8ed;
+	border-right: 		1px solid #e1e8ed;
+}
+
+.light_toggle{
+	top:		0;
+	float: 		right;
+	display: 	inline-block;
+	height: 	100%;
+}
+
+#home{
+	float: 			left;
+	display: 		inline-block;
+	font-weight: 	bold;
+	line-height: 		5vh;
+}
+
+#check{
+	transition: 		all 1s ease;
+	display: 			none;
+}
+
+
+label #dark, label #light{
+	cursor: 			pointer;
+	color: 				#1da1f2;
+	right: 				10px;
+	font-size: 			2.5vh;
+	line-height: 		5vh;
+}
+
+#check:checked ~ label #light, label #dark{
+	display: block;
+}
+
+#check:checked ~ label #dark, label #light{
+	display: none;
+}

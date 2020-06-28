@@ -1,0 +1,120 @@
+/*
+	Strips the margins and paddings of every element;
+	Sets the font for the page;
+	Removes list styling;
+	Puts a transition on every changes (that can have a transition)
+*/
+
+*{
+	margin:				0;
+	padding:			0;
+	font-family: 		"Helvetica Neue", Roboto, "Segoe UI", Calibri, sans-serif;
+	list-style-type: 	none;
+	transition: all 1s ease;
+}
+ 
+.sidebar{
+	padding-top: 		15px;
+	color:				#1da1f2;
+	font-size: 			2vh;
+	font-weight: 		bold;
+	margin-right: 		20px;
+	height: 			100vh;
+	width: 				auto;
+	float: 				right;
+	display: 			inline-block;
+	position: 			sticky;
+	top: 				0;
+}
+
+.fab{
+	font-size: 35px;
+}
+
+.write-icon{
+	font-size: 			2vh;
+	color: 				#FFF !important;
+	padding: 			0 !important;
+	background-color: 	#FFF;
+	border: 			1px solid #1da1f2;
+	width: 				auto !important;
+	height: 			auto !important;
+}
+
+.fab, .write-icon{
+	margin: 0 0 0 35px;
+}
+
+.fab, .sidebar ul a i, .write-icon{
+	color: #1da1f2 !important;
+}
+
+.sidebar ul a i{
+	margin-right: 		20px;
+}
+
+.sidebar ul li a{
+	color: #000;
+}
+
+.sidebar ul li{
+	margin: 25px 0 20px 15px;
+	width: 100%;
+}
+
+.sidebar ul a, .sidebar label i, .fab, .write-icon{
+	display: 			block;
+	box-sizing: 		border-box;
+	line-height: 		35px;
+	margin: 			15px 20px 15px 50px;
+	padding: 			0px 0px 0px 10px;
+	text-decoration: 	none;
+	transition: 		all 0.8s ease;
+	border-radius:		20px;
+}
+
+.sidebar ul li:hover a{
+	color:				#1da1f2;
+	background-color: 	rgb(0, 153, 255, 0.3);
+	border-radius: 		20px;
+}
+
+#tweet{
+	box-sizing: border-box;
+	background-color: #1da1f2 !important;
+	width: 80%;
+	border: none;
+	justify-content: center;
+	margin: 0 0 0 50px;
+	border-radius: 20px;
+	font-size: 1.5vh;
+	font-weight: bold;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	color: #FFF !important;
+}
+
+.user-account{
+	display: inline-flex;
+	margin-top: 85%;
+	float: right;
+	float: bottom;
+	height: auto;
+	width: auto;
+	border-radius: 		30px;
+	padding: 5px 15px 5px 15px;
+}
+
+.sidenav.frecom_handle{
+	color: #000;
+}
+
+.user-account:hover{
+	background-color: 	rgb(0, 153, 255, 0.3);
+	border-radius: 		30px;
+}
+
+.fa-chevron-down{
+	margin: 0 15px 0 30px;
+	font-size: 2vh;
+}

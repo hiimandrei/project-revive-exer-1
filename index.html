@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+	<meta content="utf-8" http-equiv="encoding">
+
+	<title>Home / Twitter</title>
+	
+	<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+	
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+	<link rel="stylesheet" href="static/styles/sidebar.css">
+	<link rel="stylesheet" href="static/styles/feed.css">
+	<link rel="stylesheet" href="static/styles/header.css">
+	<link rel="stylesheet" href="static/styles/footer.css">
+	<link rel="stylesheet" href="static/styles/right_panel.css">
+</head>
+<body onload="loadTweets()">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col col-md-2 col-lg-2 col-xl-4 d-none d-lg-block" id="left-side">
+				<div class="sidebar">
+					<ul>
+						<li><i class="fab fa-twitter"></i></li>
+						<li><a href="#" class="sidebar-anchor"><i class="fas fa-home fa-fw"></i>		<span class="d-none d-xl-inline-block">Home</span> 			</a></li>
+						<li><a href="#" class="sidebar-anchor"><i class="fas fa-hashtag fa-fw"></i>		<span class="d-none d-xl-inline-block">Explore</span> 	</a></li>
+						<li><a href="#" class="sidebar-anchor"><i class="far fa-bell fa-fw"></i>		<span class="d-none d-xl-inline-block">Notification</span>	</a></li>
+						<li><a href="#" class="sidebar-anchor"><i class="far fa-envelope fa-fw"></i>	<span class="d-none d-xl-inline-block">Messages</span>	</a></li>
+						<li><a href="#" class="sidebar-anchor"><i class="far fa-bookmark fa-fw"></i>	<span class="d-none d-xl-inline-block">Bookmarks</span>	</a></li>
+						<li><a href="#" class="sidebar-anchor"><i class="far fa-file-alt fa-fw"></i>	<span class="d-none d-xl-inline-block">Lists</span>		</a></li>
+						<li><a href="#" class="sidebar-anchor"><i class="far fa-user fa-fw"></i>		<span class="d-none d-xl-inline-block">Profile</span>		</a></li>
+						<li><a href="#" class="sidebar-anchor"><i class="fas fa-ellipsis-h fa-fw"></i>	<span class="d-none d-xl-inline-block">More</span>		</a></li>
+						<li><span class="d-none d-xl-block"><button type="button" id="tweet" onclick="inputFocus()">Tweet</button></span></li>
+						<li><i class="fas fa-feather-alt fa-fw d-block d-xl-none write-icon" onclick="inputFocus()"></i>
+					</ul>
+					<div class="user-account d-none d-xl-inline-flex">
+						<img src="static/imgs/twitterbaby.jpg" class="tweet_icon" alt="User Icon">
+						<div class="non-icon">
+							<div class="frecom_handle sidenav">random</div>
+							<div class="frecom_address sidenav">@hiimrandom</div>
+						</div>
+						<i class="fas fa-chevron-down"></i>
+					</div>
+				</div>
+			</div>
+			<div class="col main">
+				<div class="header sticky-top">
+					<div id="home">
+						Home
+					</div>
+					<div class="light_toggle">
+						<input type="checkbox" id="check" onclick="toggleTheme()">
+						<label for="check" class="float-right">
+							<i class="far fa-lightbulb fa-fw" id="light"></i>
+							<i class="far fa-moon fa-fw" id="dark"></i>
+						</label>
+					</div>
+				</div>
+				<div class="personal_tweet">
+					<img src="static/imgs/twitterbaby.jpg" class="tweet_icon" alt="User Icon">
+					<div class="non-icon">
+						<textarea id="tweet-input" name="tweet-input" rows="3" placeholder="What's Happening?" spellcheck="false" maxlength="100"></textarea>
+						<div class="#tweet-options">
+							<i class="fas fa-image"></i>
+							<i class="fas fa-poll-h"></i>
+							<i class="far fa-grin-squint-tears"></i>
+							<i class="far fa-clock"></i>
+							<button type="button" id="submit-tweet" onclick="postTweet()">Tweet</button>
+						</div>					
+					</div>
+				</div>
+				<div class="personal_tweet">
+					<img src="static/imgs/jakeperalta.jpg" class="tweet_icon" alt="User Icon">
+					<div class="non-icon">
+						<div class="twitter_handle">holtismydad</div>
+						<div class="twitter_address">@jake_peralta</div>
+						<div class="tweet_caption">'I am the Amazing Human Slash Genius!!!!!!!!!' title of your *toot* tape! Hah!</div>
+						<div class="user_interaction">
+							<i class="far fa-comment"></i>
+							<i class="fas fa-retweet"></i>
+							<i class="far fa-heart"></i>
+							<i class="fas fa-share-alt"></i>
+						</div>
+					</div>
+				</div>
+				<div class="personal_tweet">
+					<img src="static/imgs/icebear.jpg" class="tweet_icon" alt="User Icon">
+					<div class="non-icon">
+						<div class="twitter_handle">ice bear</div>
+						<div class="twitter_address">@cheficebear</div>
+						<div class="tweet_caption">ice bear lost his axe :(</div>
+						<div class="user_interaction">
+							<i class="far fa-comment"></i>
+							<i class="fas fa-retweet"></i>
+							<i class="far fa-heart"></i>
+							<i class="fas fa-share-alt"></i>
+						</div>
+					</div>
+				</div>				
+				<div class="personal_tweet">
+					<img src="static/imgs/amysantiago.jpg" class="tweet_icon" alt="User Icon">
+					<div class="non-icon">
+						<div class="twitter_handle">Amy Santiago</div>
+						<div class="twitter_address">@santiago_nypd</div>
+						<div class="tweet_caption">I am the Amazing Human Slash Genius!!!!!!!!!</div>
+						<img src="static/imgs/amy_tweet.jpg" class="tweet_image" alt="Tweet Image">
+						<div class="user_interaction">
+							<i class="far fa-comment"></i>
+							<i class="fas fa-retweet"></i>
+							<i class="far fa-heart"></i>
+							<i class="fas fa-share-alt"></i>
+						</div>
+					</div>
+				</div>
+				<div class="personal_tweet">
+					<img src="static/imgs/epicseven.jpg" class="tweet_icon" alt="User Icon">
+					<div class="non-icon">
+						<div class="twitter_handle">Epic Seven</div>
+						<div class="twitter_address">@epicsevensg</div>
+						<div class="tweet_caption">Summon Remnant Violet through Mystic Summons starting June 25!</div>
+						<img src="static/imgs/epicseven_tweet.jpg" class="tweet_image" alt="Tweet Image">
+						<div class="user_interaction">
+							<i class="far fa-comment"></i>
+							<i class="fas fa-retweet"></i>
+							<i class="far fa-heart"></i>
+							<i class="fas fa-share-alt"></i>
+						</div>
+					</div>
+				</div>
+				<div class="personal_tweet">
+					<img src="static/imgs/twitter.jpg" class="tweet_icon" alt="User Icon">
+					<div class="non-icon">
+						<div class="twitter_handle">Twitter</div>
+						<div class="twitter_address">@twitterbootleg</div>
+						<div class="tweet_caption">Welcome to Twitter!</div>
+						<div class="user_interaction">
+							<i class="far fa-comment"></i>
+							<i class="fas fa-retweet"></i>
+							<i class="far fa-heart"></i>
+							<i class="fas fa-share-alt"></i>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col col-xl-5 d-none d-lg-block ">
+				<div class="right_panel">
+					<div class="searchbar">
+						<i class="fas fa-search search_icon"></i>
+						<input type="text" class="search_field" placeholder="Search Twitter">
+					</div>
+					<div class="trends">
+						<div class="trend_header">Trends for you</div>
+						<div class="trend_item">
+							<div class="trend_category">gaming</div>
+							<div class="trend_title">The Last of Us 2</div>
+						</div>
+						<div class="trend_item">
+							<div class="trend_category">health</div>
+							<div class="trend_title">Covid-19</div>
+						</div>
+						<div class="trend_item">
+							<div class="trend_category">gaming</div>
+							<div class="trend_title">PS5</div>
+						</div>
+						<div class="trend_item">
+							<div class="trend_category">politics</div>
+							<div class="trend_title">REGISTER NOW</div>
+						</div>
+						<div class="trend_item">
+							<div class="trend_category">kpop</div>
+							<div class="trend_title">jihyo</div>
+						</div>
+						<div class="trend_footer"><a href="#">Show More</a></div>
+					</div>
+					<div class="follow_recom">
+						<div class="frecom_header">Who to follow</div>
+						<div class="frecom_item">
+							<img src="static/imgs/chloepark.jpg" class="tweet_icon">
+							<div class="non-icon">
+								<div class="frecom_handle">Chloe</div>
+								<div class="frecom_address">@park_chloe</div>
+							</div>
+							<div class="follow">Follow</div>
+						</div>
+						<div class="frecom_item">
+							<img src="static/imgs/rosadiaz.jpg" class="tweet_icon">
+							<div class="non-icon">
+								<div class="frecom_handle">Emily Goldfinch</div>
+								<div class="frecom_address">@notrosadiaz</div>
+							</div>
+							<div class="follow">Follow</div>
+						</div>
+						<div class="frecom_item">
+							<img src="static/imgs/toddchavez.jpg" class="tweet_icon">
+							<div class="non-icon">
+								<div class="frecom_handle">Emperor Fingerface</div>
+								<div class="frecom_address">@hokeypokeytodd</div>
+							</div>
+							<div class="follow">Follow</div>
+						</div>
+						<div class="frecom_footer"><a href="#">Show more</a></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row second-row">
+			<div id="footer" class="d-block d-lg-none">
+				<i class="fas fa-home fa-fw nav"></i>
+				<i class="fas fa-search fa-fw nav"></i>
+				<i class="far fa-bell fa-fw nav"></i>
+				<i class="far fa-envelope fa-fw nav"></i>
+			</div>
+			<i class="fas fa-feather-alt feather-icon d-block d-lg-none" onclick="inputFocus()" ontouch="inputFocus()"></i>
+		</div>
+
+	</div> 
+</body>
+<script src="js/feed.js"></script>
+</html>

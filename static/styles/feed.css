@@ -1,0 +1,114 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+.main{
+	padding: 0;
+}
+
+.personal_tweet{
+	padding: 10px 15px 10px 10px;
+	display: inline-flex;
+	border-top: 1px solid #e1e8ed;
+	border-left: 1px solid #e1e8ed;
+	border-right: 1px solid #e1e8ed;
+	width: 100%;
+}
+
+.non-icon.user-tweet{
+	width: 100%;
+}
+
+#tweet-input{
+	display: table-cell;
+	width: 100%;
+	border: none;
+	font-size: 1.8vh;
+	overflow-y: hidden;
+	resize: none;
+}
+
+#tweet-options{
+	display: inline-block;
+	width: 50%;
+	justify-content: justify;
+}
+
+.fa-image, .fa-poll-h, .fa-grin-squint-tears, .fa-clock{
+	margin: 0 5% 0 0;
+	font-size: 2vh;
+	color: #1da1f2;
+}
+
+#submit-tweet{
+	height: 100%;
+	line-height: 100%;
+	box-sizing: border-box;
+	float: right;
+	padding: 1% 2% 1% 2%;
+	border-radius: 20px;
+	border: none;
+	color: #FFF;
+	background-color: #1da1f2;
+	font-size: 1.5vh;
+	font-weight: bold;
+}
+
+.tweet_icon{
+	top:			0;
+	width: 			5vh;
+	height: 		5vh;
+	border-radius: 	50%;
+	display: 		inline-block;
+	margin: 		0 10px 0 0;
+}
+
+.non-icon{
+	display: 		inline-block;
+	left: 			0;
+	width: 			100%;
+}
+
+.twitter_handle{
+	display: 		inline-block;
+	font-size: 		1.5vh;
+	font-weight: 	bold;
+}
+
+.twitter_address{
+	display: 		inline-block;
+	font-size: 		1.5vh;
+	font-weight:	lighter;
+	color: 			gray;
+}
+
+.tweet_caption{
+	display: 		block;
+	font-size: 		1.5vh;
+	color: 			#000;
+	text-align: 	justify;
+}
+
+.tweet_image{
+	margin: 10px 0 0 0;
+	width: 100%;
+	border-radius: 10px;
+}
+
+.user_interaction{
+	display: inline-flex;
+	padding: 2px 2px 0 2px;
+	width: 100%;
+	justify-content: justify;
+}
+
+.fa-comment, .fa-retweet, .fa-heart, .fa-share-alt{
+	display: inline-block;
+	box-sizing: border-box;
+	padding: 5px 10% 0 10%;
+	font-size: 1.5vh;
+	bottom: 0;
+	color: #657786;
+	pointer-events: auto;
+}
