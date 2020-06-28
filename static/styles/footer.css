@@ -1,7 +1,9 @@
+/*Sets height of second row*/
 .second-row{
 	height: auto;
 }
 
+/*Layout of the footer when page is viewed in a small mobile port*/
 #footer{
 	position: 			fixed;
 	bottom: 			0;
@@ -16,6 +18,7 @@
 	border-top: 		1px solid #e1e8ed;
 }
 
+/*Styling of the icons on the footer*/
 .fa-fw.nav{
 	display: 		inline-block;
 	box-sizing: 	border-box;
@@ -26,6 +29,7 @@
 	line-height: 	5vh;
 }
 
+/*A tweet icon for the mobile version*/
 .feather-icon{
 	box-sizing: 		border-box;
 	margin: 			0;

@@ -4,7 +4,6 @@
 	Removes list styling;
 	Puts a transition on every changes (that can have a transition)
 */
-
 *{
 	margin:				0;
 	padding:			0;
@@ -13,6 +12,8 @@
 	transition: all 1s ease;
 }
  
+
+/*Layouts the floating sidebar on the left*/
 .sidebar{
 	padding-top: 		15px;
 	color:				#1da1f2;
@@ -27,10 +28,12 @@
 	top: 				0;
 }
 
+/*Sizes the twitter icon*/
 .fab{
 	font-size: 35px;
 }
 
+/*Sizes the tweet button on the sidebar*/
 .write-icon{
 	font-size: 			2vh;
 	color: 				#FFF !important;
@@ -41,27 +44,33 @@
 	height: 			auto !important;
 }
 
+/*Margins for both icon and button*/
 .fab, .write-icon{
 	margin: 0 0 0 35px;
 }
 
+/*Colors set for the icons and button on the sidebar*/
 .fab, .sidebar ul a i, .write-icon{
 	color: #1da1f2 !important;
 }
 
+/*Right margin of icons on the sidebar*/
 .sidebar ul a i{
 	margin-right: 		20px;
 }
 
+/*Color of anchors accompanying the icons*/
 .sidebar ul li a{
 	color: #000;
 }
 
+/*Layout of each item in the list of the sidebar*/
 .sidebar ul li{
 	margin: 25px 0 20px 15px;
 	width: 100%;
 }
 
+/*Layout of some items in the sidebar*/
 .sidebar ul a, .sidebar label i, .fab, .write-icon{
 	display: 			block;
 	box-sizing: 		border-box;
@@ -73,12 +82,14 @@
 	border-radius:		20px;
 }
 
+/*Style changes for anchor hovers*/
 .sidebar ul li:hover a{
 	color:				#1da1f2;
 	background-color: 	rgb(0, 153, 255, 0.3);
 	border-radius: 		20px;
 }
 
+/*Styling for the tweet button*/
 #tweet{
 	box-sizing: border-box;
 	background-color: #1da1f2 !important;
@@ -94,6 +105,7 @@
 	color: #FFF !important;
 }
 
+/*Styling for the account infos on the low side of the left panel*/
 .user-account{
 	display: inline-flex;
 	margin-top: 85%;
@@ -105,15 +117,18 @@
 	padding: 5px 15px 5px 15px;
 }
 
+/*Color of the handle on the sidenav*/
 .sidenav.frecom_handle{
 	color: #000;
 }
 
+/*Style change on hover of the account info*/
 .user-account:hover{
 	background-color: 	rgb(0, 153, 255, 0.3);
 	border-radius: 		30px;
 }
 
+/*Styling of an extra icon*/
 .fa-chevron-down{
 	margin: 0 15px 0 30px;
 	font-size: 2vh;

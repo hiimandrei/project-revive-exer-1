@@ -1,12 +1,16 @@
+/*Strips paddings and margins of all elements*/
 *{
 	margin: 0;
 	padding: 0;
 }
 
+/*Retained padding of main feed is removed*/
 .main{
 	padding: 0;
 }
 
+
+/*Fixes the layout of each tweet containers*/
 .personal_tweet{
 	padding: 10px 15px 10px 10px;
 	display: inline-flex;
@@ -16,10 +20,12 @@
 	width: 100%;
 }
 
+/*Width of the box with tweet content is made to fill the column*/
 .non-icon.user-tweet{
 	width: 100%;
 }
 
+/*Fix the multiline input field for tweeting*/
 #tweet-input{
 	display: table-cell;
 	width: 100%;
@@ -29,18 +35,21 @@
 	resize: none;
 }
 
+/*Fixes the display of icons under the tweet input box*/
 #tweet-options{
 	display: inline-block;
 	width: 50%;
 	justify-content: justify;
 }
 
+/*Fix the layout of said icons*/
 .fa-image, .fa-poll-h, .fa-grin-squint-tears, .fa-clock{
 	margin: 0 5% 0 0;
 	font-size: 2vh;
 	color: #1da1f2;
 }
 
+/*Laayout of tweet button in the main feed*/
 #submit-tweet{
 	height: 100%;
 	line-height: 100%;
@@ -55,6 +64,7 @@
 	font-weight: bold;
 }
 
+/*Picture of user*/
 .tweet_icon{
 	top:			0;
 	width: 			5vh;
@@ -64,18 +74,21 @@
 	margin: 		0 10px 0 0;
 }
 
+/*Everything else in the tweet item besides the user icon*/
 .non-icon{
 	display: 		inline-block;
 	left: 			0;
 	width: 			100%;
 }
 
+/*Layout of twitter handle*/
 .twitter_handle{
 	display: 		inline-block;
 	font-size: 		1.5vh;
 	font-weight: 	bold;
 }
 
+/*Layout of twitter address*/
 .twitter_address{
 	display: 		inline-block;
 	font-size: 		1.5vh;
@@ -83,6 +96,7 @@
 	color: 			gray;
 }
 
+/*Layout of the tweet itself*/
 .tweet_caption{
 	display: 		block;
 	font-size: 		1.5vh;
@@ -90,12 +104,14 @@
 	text-align: 	justify;
 }
 
+/*Layout of tweeted image*/
 .tweet_image{
 	margin: 10px 0 0 0;
 	width: 100%;
 	border-radius: 10px;
 }
 
+/*Fixes the icons under the tweets*/
 .user_interaction{
 	display: inline-flex;
 	padding: 2px 2px 0 2px;
@@ -103,6 +119,7 @@
 	justify-content: justify;
 }
 
+/*Icons for the tweet*/
 .fa-comment, .fa-retweet, .fa-heart, .fa-share-alt{
 	display: inline-block;
 	box-sizing: border-box;

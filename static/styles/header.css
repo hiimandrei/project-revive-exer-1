@@ -1,3 +1,4 @@
+/*Styling of the container for the header*/
 .header{
 	display: 			block;
 	position: 			sticky;
@@ -14,6 +15,7 @@
 	border-right: 		1px solid #e1e8ed;
 }
 
+/*Styling for the theme toggle wrapper*/
 .light_toggle{
 	top:		0;
 	float: 		right;
@@ -21,6 +23,7 @@
 	height: 	100%;
 }
 
+/*Styling for the home text on the header*/
 #home{
 	float: 			left;
 	display: 		inline-block;
@@ -28,12 +31,13 @@
 	line-height: 		5vh;
 }
 
+/*Styling for checkbox used by the toggle*/
 #check{
 	transition: 		all 1s ease;
 	display: 			none;
 }
 
-
+/*Styling of the checkbox labels*/
 label #dark, label #light{
 	cursor: 			pointer;
 	color: 				#1da1f2;
@@ -42,6 +46,7 @@ label #dark, label #light{
 	line-height: 		5vh;
 }
 
+/*Label changes on toggle*/
 #check:checked ~ label #light, label #dark{
 	display: block;
 }
